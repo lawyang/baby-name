@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToolbarmenuComponent implements OnInit {
 
+  links = [
+    { path: '/landing', icon: 'home', label: 'landing'},
+    { path: '/searchpage', icon: 'home', label: 'Search'},
+  ];
+
   constructor() { }
 
   ngOnInit() {

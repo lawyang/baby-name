@@ -8,9 +8,7 @@ import { SearchpageComponent } from '../app/searchpage/searchpage.component';
 const routes: Routes = [
   { path: '', redirectTo: '/landing', pathMatch: 'full' },
   { path: 'landing', component: LandingComponent },
-  { path: 'toolbar', component: ToolbarmenuComponent },
   { path: 'searchpage', component: SearchpageComponent },
-  // {path: 'items', component: ItemsComponent, data: { animation: 'items' }},
 ];
 
 @NgModule({

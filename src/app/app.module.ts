@@ -6,17 +6,23 @@ import { LandingComponent } from './landing/landing.component';
 import { ToolbarmenuComponent } from './toolbarmenu/toolbarmenu.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { SearchpageComponent } from './searchpage/searchpage.component';
+import { MatFormFieldModule, MatInputModule } from '@angular/material';
+import { AppMaterialModule } from './app-material.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingComponent,
     ToolbarmenuComponent,
-    SearchpageComponent
+    SearchpageComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatFormFieldModule,
+    MatInputModule,
+    AppMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

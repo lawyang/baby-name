@@ -1,3 +1,13 @@
-<p>
-  toolbarmenu works!
-</p>
+<mat-toolbar color="primary">
+    <nav>
+    <a md-button
+         class="nav-link"
+         *ngFor="let link of links"
+         [routerLink]="link.path"
+         routerLinkActive="active">
+        {{link.label}}
+      </a>
+  </nav>
+  <mat-icon class="example-icon">favorite</mat-icon>
+</mat-toolbar>
+  

@@ -5,21 +5,11 @@
   </h1>
 </div>
 <div>
-
-  <nav>
-    <!-- <a routerLink="/landing">Landing</a>
-    <a routerLink="/searchpage">search</a> -->
-    <a md-button
-         class="nav-link"
-         *ngFor="let link of links"
-         [routerLink]="link.path"
-         routerLinkActive="active">
-        {{link.label}}
-      </a>
-  </nav>
+    <app-toolbarmenu></app-toolbarmenu>
 </div>
 <div>
   <router-outlet></router-outlet>
 </div>
+
 
 
