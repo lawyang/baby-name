@@ -3,10 +3,11 @@
 </p>
 <ul>
   <li *ngFor="let number of test">{{number}}</li>
-
 </ul>
 <div>
-
-  <input matInput placeholder="Enter Name" />
-  
+    <input placeholder="Input" [(ngModel)]="babyName">
+    <button (click)="search()">Search</button>
+</div>
+<div *ngIf="response">
+  <p>Name: {{response.name}}</p>
 </div>

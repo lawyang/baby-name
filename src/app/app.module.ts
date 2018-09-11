@@ -9,20 +9,25 @@ import { SearchpageComponent } from './searchpage/searchpage.component';
 import { MatFormFieldModule, MatInputModule } from '@angular/material';
 import { AppMaterialModule } from './app-material.module';
 
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
     LandingComponent,
     ToolbarmenuComponent,
     SearchpageComponent,
-
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatFormFieldModule,
     MatInputModule,
-    AppMaterialModule
+    AppMaterialModule,
+    HttpClientModule,
+    FormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
