@@ -1,13 +1,16 @@
 <p>
   searchpage works!
 </p>
-<ul>
-  <li *ngFor="let number of test">{{number}}</li>
-</ul>
+<p>{{mary}}</p>
 <div>
     <input placeholder="Input" [(ngModel)]="babyName">
     <button (click)="search()">Search</button>
 </div>
 <div *ngIf="response">
   <p>Name: {{response.name}}</p>
+  <p>Gender: {{gender}}</p>
+  <p> Origin </p>
+  <ul>
+      <li *ngFor="let use of usage">{{use.usage_full}}</li>
+  </ul>
 </div>
