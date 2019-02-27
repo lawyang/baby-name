@@ -5,6 +5,7 @@
 <div>
     <input placeholder="Input" [(ngModel)]="babyName">
     <button (click)="search()">Search</button>
+    <button (click)="randomFemale()">Random Girl Name</button>
 </div>
 <div *ngIf="response">
   <p>Name: {{response.name}}</p>
@@ -13,4 +14,9 @@
   <ul>
       <li *ngFor="let use of usage">{{use.usage_full}}</li>
   </ul>
+</div>
+<div>
+    <ul>
+        <li *ngFor="let name of random">{{name}}</li>
+    </ul>
 </div>

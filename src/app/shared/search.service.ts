@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { map} from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 import { Name } from './name';
 import { Observable } from 'rxjs';
@@ -15,7 +15,10 @@ export class SearchService {
   constructor(private http: HttpClient) {}
 
   getName(): Observable<Name[]> {
-    return this.http.get<Name[]>(NAME_URL);
+    return this.http.get<Name[]>(NAME_URL)
+        .map(data => {
+        console.log(data);
+      });
   }
 
   print(arg) {

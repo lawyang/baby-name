@@ -16,6 +16,7 @@ export class SearchpageComponent implements OnInit {
   mary: any;
   usage = [];
   gender = '';
+  random: string[];
 
   constructor(private searchService: SearchService, private http: HttpClient) {
     searchService.print('Got the service!');
@@ -26,6 +27,15 @@ export class SearchpageComponent implements OnInit {
     this.searchService.getName()
       .subscribe(data => this.mary = data);
       console.log('observable', this.mary);
+  }
+
+  randomFemale() {
+    const url  = this.http.get(`https://www.behindthename.com/api/random.json?usage=ita&number=6&gender=f&key=la201484095`);
+    url.subscribe(response => {
+      this.random = response.names;
+      console.log('response:', response);
+      console.log(this.random);
+    });
   }
 
   search() {
